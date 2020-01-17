@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+      #sleuth 
+    #sleuth:
+    #  sampler:
+     #   rate: 1
+   # zipkin:
+     # base-url: http://localhost:9411/ 
+server:
+  port: 7912
+  
+eureka:
+  client:
+  #是否将自己注册到eureka server
+    register-with-eureka: false
+    #是否从eureka server 获取注册信息 由于是单节点不需要同步其他节点数据用 false
+    fetch-registry: false
+    #设置注册中心的url 用于client 和server 端交流
+    service-url:
+      defaultZone: http://localhost:7900/eureka/
