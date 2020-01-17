@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-client
+      #sleuth 
+  redis:
+    host: 192.168.139.150
+    port: 6379
+    timeout: 2000
+server:
+  port: 7913
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7900/eureka/
